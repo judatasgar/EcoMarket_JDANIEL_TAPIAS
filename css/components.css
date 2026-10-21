@@ -234,3 +234,31 @@
   background-color: #eeeeee;
   color: var(--texto-suave);
 }
+
+/* ===== FAVORITO ===== */
+/* El corazón se pone rojo cuando su tarjeta es el :target, o mientras lo presionas con :active (Vista B: Botón Favoritos) */
+.tarjeta {
+  scroll-margin-top: 6rem;            /* al saltar con #producto-x, que no quede tapada por el header */
+}
+
+.favorito {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--borde);
+  border-radius: 50%;
+  font-size: 1.1rem;
+  color: #c4c4c4;
+}
+
+.favorito:hover {
+  color: var(--error);
+}
+
+.tarjeta:target .favorito,
+.favorito:active {
+  color: var(--error);
+  border-color: var(--error);
+  background-color: #fdecea;
+}

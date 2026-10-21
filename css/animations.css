@@ -43,3 +43,12 @@
 .buscador__campo {
   transition: border-color var(--transicion), background-color var(--transicion);
 }
+
+/* El corazón late un poco al presionarlo */
+.favorito {
+  transition: color var(--transicion), background-color var(--transicion), transform 0.15s ease;
+}
+
+.favorito:active {
+  transform: scale(0.85);
+}
