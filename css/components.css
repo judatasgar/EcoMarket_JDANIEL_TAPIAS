@@ -199,3 +199,38 @@
     content: none;
   }
 }
+
+/* ===== TARJETA DE CATÁLOGO (piezas extra) ===== */
+.tarjeta__precio {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--verde-oscuro);
+}
+
+.tarjeta__pie {
+  width: 100%;
+  margin-top: auto;                   /* empuja la fila al fondo de la tarjeta */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tarjeta--agotado .tarjeta__imagen {
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+/* ===== ETIQUETA DE STOCK ===== */
+.etiqueta {
+  padding: 0.2rem 0.7rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: #d5f5e3;
+  color: var(--verde-oscuro);
+}
+
+.etiqueta--agotado {
+  background-color: #eeeeee;
+  color: var(--texto-suave);
+}

@@ -272,3 +272,29 @@
     top: 6rem;                          /* se queda debajo del header al hacer scroll */
   }
 }
+
+/* Grid de 20 productos: 1 → 2 → 3 → 4 columnas (Vista B: Responsividad) */
+.productos__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacio-l);
+}
+
+@media (min-width: 768px) {
+  .productos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .productos__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 4 columnas solo cuando hay espacio de verdad junto a la sidebar (Vista B: 4 columnas en Desktop) */
+@media (min-width: 1280px) {
+  .productos__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
