@@ -15,14 +15,151 @@
 
   <header class="encabezado">
     <a href="index.html" class="encabezado__logo">EcoMarket</a>
+
+    <!-- Accesos directos (Carrito, Búsqueda) -->
+    <div class="encabezado__acciones">
+      <a href="views/productos.html" aria-label="Buscar productos">
+        <img src="img/icons/buscar.svg" alt="">
+      </a>
+      <a href="#" aria-label="Ver carrito">
+        <img src="img/icons/carrito.svg" alt="">
+      </a>
+    </div>
+
+    <!-- Checkbox invisible guarda si el menú está abierto o cerrado -->
+    <input type="checkbox" id="menu-toggle" class="encabezado__toggle">
+    <label for="menu-toggle" class="encabezado__hamburguesa" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="nav">
+      <ul class="nav__lista">
+        <li><a href="index.html" class="nav__enlace nav__enlace--activo">Inicio</a></li>
+        <li><a href="views/productos.html" class="nav__enlace">Productos</a></li>
+        <li><a href="views/sobre-nosotros.html" class="nav__enlace">Nosotros</a></li>
+        <li><a href="views/contacto.html" class="nav__enlace">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
-   <main>
-    <!-- Aquí irán el hero y los productos destacados -->
+  <main>
+    <!-- Banner principal: lo primero que ve el usuario  -->
+    <section class="hero">
+      <div class="hero__contenido">
+        <h1 class="hero__titulo">Compra responsable, vive sostenible</h1>
+        <p class="hero__texto">Productos ecológicos, reutilizables y sustentables para tu día a día.</p>
+        <a href="views/productos.html" class="boton">Explorar productos</a>
+      </div>
+    </section>
+
+    <!-- 6 productos en grid; cada tarjeta es un article porque tiene sentido por sí sola (Vista A: Destacados) -->
+    <section class="destacados">
+      <h2 class="destacados__titulo">Productos destacados</h2>
+
+      <div class="destacados__grid">
+        <article class="tarjeta">
+          <img src="img/products/cepillo-bambu.webp" alt="Cepillo de dientes de bambú" class="tarjeta__imagen">
+          <div class="tarjeta__cuerpo">
+            <h3 class="tarjeta__titulo">Cepillo de bambú</h3>
+            <p class="tarjeta__descripcion">Biodegradable y con cerdas suaves. Adiós al plástico en tu baño.</p>
+            <a href="views/productos.html" class="boton boton--secundario">Ver más</a>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <img src="img/products/botella-acero.webp" alt="Botella reutilizable de acero inoxidable" class="tarjeta__imagen">
+          <div class="tarjeta__cuerpo">
+            <h3 class="tarjeta__titulo">Botella de acero</h3>
+            <p class="tarjeta__descripcion">Mantiene tu bebida fría 24 horas. Reemplaza cientos de botellas plásticas.</p>
+            <a href="views/productos.html" class="boton boton--secundario">Ver más</a>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <img src="img/products/bolsa-tela.webp" alt="Bolsa de tela de algodón" class="tarjeta__imagen">
+          <div class="tarjeta__cuerpo">
+            <h3 class="tarjeta__titulo">Bolsa de tela</h3>
+            <p class="tarjeta__descripcion">Algodón resistente para tus compras. Plegable y lavable.</p>
+            <a href="views/productos.html" class="boton boton--secundario">Ver más</a>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <img src="img/products/jabon-artesanal.webp" alt="Jabón artesanal natural" class="tarjeta__imagen">
+          <div class="tarjeta__cuerpo">
+            <h3 class="tarjeta__titulo">Jabón artesanal</h3>
+            <p class="tarjeta__descripcion">Ingredientes naturales y sin empaque plástico. Suave con tu piel.</p>
+            <a href="views/productos.html" class="boton boton--secundario">Ver más</a>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <img src="img/products/envoltura-cera.webp" alt="Envolturas de cera de abejas para alimentos" class="tarjeta__imagen">
+          <div class="tarjeta__cuerpo">
+            <h3 class="tarjeta__titulo">Envoltura de cera</h3>
+            <p class="tarjeta__descripcion">Conserva tus alimentos sin papel film. Reutilizable por un año.</p>
+            <a href="views/productos.html" class="boton boton--secundario">Ver más</a>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <img src="img/products/cafe-organico.webp" alt="Bolsa de café orgánico" class="tarjeta__imagen">
+          <div class="tarjeta__cuerpo">
+            <h3 class="tarjeta__titulo">Café orgánico</h3>
+            <p class="tarjeta__descripcion">Cultivado sin químicos por pequeños productores locales.</p>
+            <a href="views/productos.html" class="boton boton--secundario">Ver más</a>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
-   <footer class="pie">
-    <!-- Contacto, enlaces legales y redes -->
+  <footer class="pie">
+    <div class="pie__columnas">
+      <!-- Datos de contacto; address es la etiqueta semántica para "cómo contactar al dueño de la página" (Vista A: Footer) -->
+      <section class="pie__bloque">
+        <h2 class="pie__titulo">Contacto</h2>
+        <address class="pie__contacto">
+          <a href="mailto:correo_atencion@ecomarket.co">correo_atencion@ecomarket.co</a>
+          <a href="tel:+573155724762">+57 315 572 4762</a>
+          <span>Calle 86 # 12-34, Bucaramanga, Santander</span>
+        </address>
+      </section>
+
+      <nav class="pie__bloque" aria-label="Enlaces legales">
+        <h2 class="pie__titulo">Legal</h2>
+        <ul class="pie__lista">
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Envíos y devoluciones</a></li>
+        </ul>
+      </nav>
+
+      <section class="pie__bloque">
+        <h2 class="pie__titulo">Síguenos</h2>
+        <ul class="redes">
+          <li>
+            <a href="https://www.instagram.com/dancing_dogs?mdxt=ZDNlZDc0MzIxNw==" class="redes__enlace" aria-label="Instagram" target="_blank" rel="noopener">
+              <img src="img/icons/instagram.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/visitgalvestonisland" class="redes__enlace" aria-label="Facebook" target="_blank" rel="noopener">
+              <img src="img/icons/facebook.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=bIHa1L19XYk" class="redes__enlace" aria-label="YouTube" target="_blank" rel="noopener">
+              <img src="img/icons/youtube.svg" alt="">
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="pie__copy">© 2026 EcoMarket · Compra responsable, vive sostenible y... solo Z1!</p>
   </footer>
   
 </body>
