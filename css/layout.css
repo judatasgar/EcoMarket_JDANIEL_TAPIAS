@@ -1,1 +1,113 @@
 /* Estructura general: header, footer y grillas de cada sección. */
+/* Móvil primero: logo, iconos y ☰ en una fila; el menú cae debajo ocupando todo el ancho (Vista A, Mobile First) */
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;              /* permite que el nav baje a una segunda línea */
+  align-items: center;
+  gap: var(--espacio-m);
+  padding: var(--espacio-m);
+  background-color: var(--blanco);
+  border-bottom: 1px solid var(--borde);
+  position: sticky;             /* el header acompaña el scroll */
+  top: 0;
+  z-index: 10;                  /* que quede por encima del resto al hacer scroll */
+}
+
+.encabezado__logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--verde-oscuro);
+  margin-right: auto;           /* empuja todo lo demás hacia la derecha */
+}
+
+.encabezado__acciones {
+  display: flex;
+  gap: var(--espacio-m);
+}
+
+/* El checkbox existe pero no se ve: solo guarda el estado abierto/cerrado */
+.encabezado__toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Las 3 rayitas del ☰ */
+.encabezado__hamburguesa {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: var(--espacio-s);
+  cursor: pointer;
+}
+
+.encabezado__hamburguesa span {
+  width: 24px;
+  height: 2px;
+  background-color: var(--texto);
+}
+
+/* ===== NAVEGACIÓN ===== */
+/* Cerrado por defecto en móvil */
+.nav {
+  display: none;
+  width: 100%;                  /* ocupa la línea completa debajo del logo */
+}
+
+/* LA MAGIA: si el checkbox está marcado, muestra el nav que viene después (Cero JavaScript) */
+.encabezado__toggle:checked ~ .nav {
+  display: block;
+}
+
+.nav__lista {
+  display: flex;
+  flex-direction: column;       /* en móvil, un enlace debajo del otro */
+  gap: var(--espacio-s);
+}
+
+.nav__enlace {
+  display: block;
+  padding: var(--espacio-s) 0;
+}
+
+.nav__enlace:hover,
+.nav__enlace--activo {
+  color: var(--verde-oscuro);
+  font-weight: 700;
+}
+
+/* ===== TABLET EN ADELANTE (768px) ===== */
+/* Ya cabe todo en una fila: chao ☰, el menú se ve siempre */
+@media (min-width: 768px) {
+  .encabezado {
+    flex-wrap: nowrap;
+    padding: var(--espacio-m) var(--espacio-xl);
+  }
+
+  .encabezado__logo {
+    margin-right: 0;
+  }
+
+  .encabezado__hamburguesa {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+    width: auto;
+    order: 1;                   /* reordeno visualmente: logo | menú | iconos */
+  }
+
+  .encabezado__acciones {
+    order: 2;
+  }
+
+  .encabezado {
+    justify-content: space-between;
+  }
+
+  .nav__lista {
+    flex-direction: row;        /* enlaces en fila */
+    gap: var(--espacio-l);
+  }
+}

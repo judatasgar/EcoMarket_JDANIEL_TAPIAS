@@ -15,6 +15,33 @@
 
   <header class="encabezado">
     <a href="index.html" class="encabezado__logo">EcoMarket</a>
+
+    <!-- Accesos directos (Carrito, Búsqueda) -->
+    <div class="encabezado__acciones">
+      <a href="views/productos.html" aria-label="Buscar productos">
+        <img src="img/icons/buscar.svg" alt="">
+      </a>
+      <a href="#" aria-label="Ver carrito">
+        <img src="img/icons/carrito.svg" alt="">
+      </a>
+    </div>
+
+    <!-- Checkbox invisible guarda si el menú está abierto o cerrado -->
+    <input type="checkbox" id="menu-toggle" class="encabezado__toggle">
+    <label for="menu-toggle" class="encabezado__hamburguesa" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="nav">
+      <ul class="nav__lista">
+        <li><a href="index.html" class="nav__enlace nav__enlace--activo">Inicio</a></li>
+        <li><a href="views/productos.html" class="nav__enlace">Productos</a></li>
+        <li><a href="views/sobre-nosotros.html" class="nav__enlace">Nosotros</a></li>
+        <li><a href="views/contacto.html" class="nav__enlace">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
    <main>

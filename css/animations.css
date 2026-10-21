@@ -1,1 +1,7 @@
 /* Transiciones y Keyframes. */
+
+/* El cambio de color del menú no es brusco, se desvanece suave */
+.nav__enlace {
+  transition: color var(--transicion);
+}
+
