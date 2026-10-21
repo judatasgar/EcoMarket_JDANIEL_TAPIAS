@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de productos ecológicos de EcoMarket: hogar, moda, cuidado personal y alimentos.">
+  <title>EcoMarket | Productos</title>
+
+  <!-- Desde views/ hay que subir un nivel (../) para llegar a css/ -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <!-- Mismo header del Home; solo cambian las rutas y cuál enlace está activo -->
+  <header class="encabezado">
+    <a href="../index.html" class="encabezado__logo">EcoMarket</a>
+
+    <div class="encabezado__acciones">
+      <a href="#buscar" aria-label="Buscar productos">
+        <img src="../img/icons/buscar.svg" alt="">
+      </a>
+      <a href="#" aria-label="Ver carrito">
+        <img src="../img/icons/carrito.svg" alt="">
+      </a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="encabezado__toggle">
+    <label for="menu-toggle" class="encabezado__hamburguesa" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="nav">
+      <ul class="nav__lista">
+        <li><a href="../index.html" class="nav__enlace">Inicio</a></li>
+        <li><a href="productos.html" class="nav__enlace nav__enlace--activo">Productos</a></li>
+        <li><a href="sobre-nosotros.html" class="nav__enlace">Nosotros</a></li>
+        <li><a href="contacto.html" class="nav__enlace">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>  
+  
+  <main class="catalogo">
+    <!-- Título y buscador visual: se ve como un buscador real, pero sin JS no filtra (Vista B: Barra superior) -->
+    <div class="catalogo__cabecera">
+      <h1 class="catalogo__titulo">Nuestros productos</h1>
+      <form class="buscador" role="search" action="#">
+        <label for="buscar" class="visualmente-oculto">Buscar productos</label>
+        <img src="../img/icons/buscar.svg" alt="" class="buscador__icono">
+        <input type="search" id="buscar" class="buscador__campo" placeholder="Buscar productos ecológicos...">
+      </form>
+    </div>
+
+    <div class="catalogo__cuerpo">
+      <!-- Sidebar de filtros: plegable en móvil con el mismo truco del menú, fija al hacer scroll en escritorio (Vista B: Sidebar sticky) -->
+      <aside class="filtros">
+        <input type="checkbox" id="filtros-toggle" class="filtros__toggle">
+        <label for="filtros-toggle" class="filtros__boton">Filtros</label>
+
+        <div class="filtros__panel">
+          <fieldset class="filtros__grupo">
+            <legend class="filtros__leyenda">Categorías</legend>
+            <label class="filtros__opcion"><input type="checkbox" name="categoria" value="hogar"> Hogar</label>
+            <label class="filtros__opcion"><input type="checkbox" name="categoria" value="moda"> Moda</label>
+            <label class="filtros__opcion"><input type="checkbox" name="categoria" value="cuidado"> Cuidado Personal</label>
+            <label class="filtros__opcion"><input type="checkbox" name="categoria" value="alimentos"> Alimentos</label>
+          </fieldset>
+
+          <fieldset class="filtros__grupo">
+            <legend class="filtros__leyenda">Rango de precio</legend>
+            <input type="range" min="0" max="150000" step="5000" value="80000" class="filtros__rango" aria-label="Precio máximo">
+            <p class="filtros__rango-texto">$ 0 — $ 150.000</p>
+          </fieldset>
+
+          <fieldset class="filtros__grupo">
+            <legend class="filtros__leyenda">Disponibilidad</legend>
+            <label class="filtros__opcion"><input type="checkbox" name="stock" value="disponible"> En stock</label>
+            <label class="filtros__opcion"><input type="checkbox" name="stock" value="agotado"> Agotado</label>
+          </fieldset>
+        </div>
+      </aside>
+
+      <!-- 20 productos en grid: 1 → 2 → 3 → 4 columnas según el ancho (Vista B: Grid de productos) -->
+      <section class="productos" aria-label="Lista de productos">
+        <div class="productos__grid">
+
+          <article class="tarjeta" id="producto-1">
+            <img src="../img/products/cepillo-bambu.webp" alt="Cepillo de dientes de bambú" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Cepillo de bambú</h2>
+              <p class="tarjeta__precio">$ 8.900</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-1" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" id="producto-2">
+            <img src="../img/products/botella-acero.webp" alt="Botella reutilizable de acero inoxidable" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Botella de acero</h2>
+              <p class="tarjeta__precio">$ 45.000</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-2" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" id="producto-3">
+            <img src="../img/products/bolsa-tela.webp" alt="Bolsa de tela de algodón" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Bolsa de tela</h2>
+              <p class="tarjeta__precio">$ 18.000</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-3" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" id="producto-4">
+            <img src="../img/products/jabon-artesanal.webp" alt="Jabón artesanal natural" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Jabón artesanal</h2>
+              <p class="tarjeta__precio">$ 12.500</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-4" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta tarjeta--agotado" id="producto-5">
+            <img src="../img/products/envoltura-cera.webp" alt="Envolturas de cera de abejas" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Envoltura de cera</h2>
+              <p class="tarjeta__precio">$ 22.000</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta etiqueta--agotado">Agotado</span>
+                <a href="#producto-5" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" id="producto-6">
+            <img src="../img/products/cafe-organico.webp" alt="Bolsa de café orgánico" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Café orgánico</h2>
+              <p class="tarjeta__precio">$ 32.000</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-6" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" id="producto-7">
+            <img src="../img/products/champu-solido.webp" alt="Barra de champú sólido" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Champú sólido</h2>
+              <p class="tarjeta__precio">$ 24.000</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-7" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" id="producto-8">
+            <img src="../img/products/pajillas-metal.webp" alt="Pajillas de metal reutilizables" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Pajillas de metal</h2>
+              <p class="tarjeta__precio">$ 15.000</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-8" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" id="producto-9">
+            <img src="../img/products/cubiertos-bambu.webp" alt="Set de cubiertos de bambú en estuche de tela" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Cubiertos de bambú</h2>
+              <p class="tarjeta__precio">$ 19.900</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-9" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta tarjeta--agotado" id="producto-10">
+            <img src="../img/products/camiseta-organica.webp" alt="Camiseta de algodón orgánico" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Camiseta orgánica</h2>
+              <p class="tarjeta__precio">$ 59.000</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta etiqueta--agotado">Agotado</span>
+                <a href="#producto-10" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" id="producto-11">
+            <img src="../img/products/mochila-reciclada.webp" alt="Mochila de material reciclado" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Mochila reciclada</h2>
+              <p class="tarjeta__precio">$ 120.000</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-11" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" id="producto-12">
+            <img src="../img/products/miel-local.webp" alt="Frasco de miel local" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Miel local</h2>
+              <p class="tarjeta__precio">$ 28.000</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-12" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" id="producto-13">
+            <img src="../img/products/cepillo-bambu.webp" alt="Kit familiar de cepillos de bambú" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Kit cepillos familiar</h2>
+              <p class="tarjeta__precio">$ 29.900</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-13" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta tarjeta--agotado" id="producto-14">
+            <img src="../img/products/botella-acero.webp" alt="Termo de acero de un litro" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Termo de acero 1 L</h2>
+              <p class="tarjeta__precio">$ 68.000</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta etiqueta--agotado">Agotado</span>
+                <a href="#producto-14" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" id="producto-15">
+            <img src="../img/products/bolsa-tela.webp" alt="Bolsa de mercado de tela tamaño grande" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Bolsa de mercado XL</h2>
+              <p class="tarjeta__precio">$ 25.000</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-15" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" id="producto-16">
+            <img src="../img/products/jabon-artesanal.webp" alt="Jabón artesanal de avena" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Jabón de avena</h2>
+              <p class="tarjeta__precio">$ 13.500</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-16" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" id="producto-17">
+            <img src="../img/products/cafe-organico.webp" alt="Café molido de origen" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Café molido de origen</h2>
+              <p class="tarjeta__precio">$ 29.000</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-17" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" id="producto-18">
+            <img src="../img/products/pajillas-metal.webp" alt="Set de cuatro pajillas de metal" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Set de pajillas x4</h2>
+              <p class="tarjeta__precio">$ 21.000</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-18" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta tarjeta--agotado" id="producto-19">
+            <img src="../img/products/miel-local.webp" alt="Miel con panal" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Miel con panal</h2>
+              <p class="tarjeta__precio">$ 39.000</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta etiqueta--agotado">Agotado</span>
+                <a href="#producto-19" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" id="producto-20">
+            <img src="../img/products/champu-solido.webp" alt="Champú sólido de romero" class="tarjeta__imagen" loading="lazy">
+            <div class="tarjeta__cuerpo">
+              <h2 class="tarjeta__titulo">Champú de romero</h2>
+              <p class="tarjeta__precio">$ 26.000</p>
+              <div class="tarjeta__pie">
+                <span class="etiqueta">En stock</span>
+                <a href="#producto-20" class="favorito" aria-label="Agregar a favoritos">♥</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Paginación visual: números y anterior/siguiente (Vista B: Paginación) -->
+        <nav class="paginacion" aria-label="Paginación">
+          <ul class="paginacion__lista">
+            <li><a href="#" class="paginacion__enlace">« Anterior</a></li>
+            <li><a href="#" class="paginacion__enlace paginacion__enlace--activo" aria-current="page">1</a></li>
+            <li><a href="#" class="paginacion__enlace">2</a></li>
+            <li><a href="#" class="paginacion__enlace">3</a></li>
+            <li><a href="#" class="paginacion__enlace">Siguiente »</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="pie">
+    <div class="pie__columnas">
+      <section class="pie__bloque">
+        <h2 class="pie__titulo">Contacto</h2>
+        <address class="pie__contacto">
+          <a href="mailto:hola@ecomarket.co">hola@ecomarket.co</a>
+          <a href="tel:+573000000000">+57 300 000 0000</a>
+          <span>Calle 00 #00-00, Ciudad</span>
+        </address>
+      </section>
+
+      <nav class="pie__bloque" aria-label="Enlaces legales">
+        <h2 class="pie__titulo">Legal</h2>
+        <ul class="pie__lista">
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Envíos y devoluciones</a></li>
+        </ul>
+      </nav>
+
+      <section class="pie__bloque">
+        <h2 class="pie__titulo">Síguenos</h2>
+        <ul class="redes">
+          <li><a href="https://www.instagram.com/dancing_dogs?mdxt=ZDNlZDc0MzIxNw==" class="redes__enlace" aria-label="Instagram" target="_blank" rel="noopener"><img src="../img/icons/instagram.svg" alt=""></a></li>
+          <li><a href="https://www.facebook.com/visitgalvestonisland" class="redes__enlace" aria-label="Facebook" target="_blank" rel="noopener"><img src="../img/icons/facebook.svg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=bIHa1L19XYk" class="redes__enlace" aria-label="YouTube" target="_blank" rel="noopener"><img src="../img/icons/youtube.svg" alt=""></a></li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="pie__copy">© 2026 EcoMarket · Compra responsable, vive sostenible</p>
+  </footer>
+
+</body>
+</html>
