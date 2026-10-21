@@ -229,3 +229,72 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ===== CATÁLOGO ===== */
+/* Contenedor de la página: centrado y con aire a los lados (Vista B) */
+.catalogo {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: var(--espacio-l) var(--espacio-m) var(--espacio-xl);
+}
+
+.catalogo__cabecera {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
+  margin-bottom: var(--espacio-l);
+}
+
+.catalogo__titulo {
+  font-size: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .catalogo__titulo {
+    font-size: 2.25rem;
+  }
+}
+
+/* Móvil: filtros arriba, productos abajo. Escritorio: sidebar fija a la izquierda (Vista B: Sidebar sticky) */
+.catalogo__cuerpo {
+  display: grid;
+  gap: var(--espacio-l);
+}
+
+@media (min-width: 1024px) {
+  .catalogo__cuerpo {
+    grid-template-columns: 15rem 1fr;   /* columna fija para filtros, el resto para productos */
+    align-items: start;                 /* sin esto, el sticky no funciona */
+  }
+
+  .filtros {
+    position: sticky;
+    top: 6rem;                          /* se queda debajo del header al hacer scroll */
+  }
+}
+
+/* Grid de 20 productos: 1 → 2 → 3 → 4 columnas (Vista B: Responsividad) */
+.productos__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacio-l);
+}
+
+@media (min-width: 768px) {
+  .productos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .productos__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 4 columnas solo cuando hay espacio de verdad junto a la sidebar (Vista B: 4 columnas en Desktop) */
+@media (min-width: 1280px) {
+  .productos__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
