@@ -1,1 +1,41 @@
 /* Transiciones y Keyframes. */
+
+/* El cambio de color del menú no es brusco, se desvanece suave */
+.nav__enlace {
+  transition: color var(--transicion);
+}
+
+/* La tarjeta se eleva suave al pasar el mouse (Vista A: Interacción hover) */
+.tarjeta {
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.boton {
+  transition: background-color var(--transicion), color var(--transicion);
+}
+
+/* Respeto a quien desactivó las animaciones en su sistema (mareos, sensibilidad al movimiento) */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+/* Los iconos sociales crecen un poco al pasar el mouse (Vista D: animación scale) */
+.redes__enlace {
+  transition: transform var(--transicion), background-color var(--transicion);
+}
+
+.redes__enlace:hover {
+  transform: scale(1.15);
+  background-color: var(--verde);
+}
+
+.pie a {
+  transition: color var(--transicion);
+}
