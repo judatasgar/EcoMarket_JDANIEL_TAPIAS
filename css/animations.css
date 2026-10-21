@@ -52,3 +52,7 @@
 .favorito:active {
   transform: scale(0.85);
 }
+
+.paginacion__enlace {
+  transition: border-color var(--transicion), color var(--transicion), background-color var(--transicion);
+}

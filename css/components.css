@@ -262,3 +262,34 @@
   border-color: var(--error);
   background-color: #fdecea;
 }
+
+/* ===== PAGINACIÓN ===== */
+/* Bloque visual con números y anterior/siguiente; la página actual va resaltada (Vista B: Paginación) */
+.paginacion {
+  margin-top: var(--espacio-xl);
+}
+
+.paginacion__lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--espacio-s);
+}
+
+.paginacion__enlace {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--borde);
+  border-radius: 0.5rem;
+}
+
+.paginacion__enlace:hover {
+  border-color: var(--verde-oscuro);
+  color: var(--verde-oscuro);
+}
+
+.paginacion__enlace--activo {
+  background-color: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
+  color: var(--blanco);
+}
