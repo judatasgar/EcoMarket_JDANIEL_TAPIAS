@@ -44,8 +44,76 @@
     </nav>
   </header>
 
-   <main>
-    <!-- Aquí irán el hero y los productos destacados -->
+  <main>
+    <!-- Banner principal: lo primero que ve el usuario  -->
+    <section class="hero">
+      <div class="hero__contenido">
+        <h1 class="hero__titulo">Compra responsable, vive sostenible</h1>
+        <p class="hero__texto">Productos ecológicos, reutilizables y sustentables para tu día a día.</p>
+        <a href="views/productos.html" class="boton">Explorar productos</a>
+      </div>
+    </section>
+
+    <!-- 6 productos en grid; cada tarjeta es un article porque tiene sentido por sí sola (Vista A: Destacados) -->
+    <section class="destacados">
+      <h2 class="destacados__titulo">Productos destacados</h2>
+
+      <div class="destacados__grid">
+        <article class="tarjeta">
+          <img src="img/products/cepillo-bambu.webp" alt="Cepillo de dientes de bambú" class="tarjeta__imagen">
+          <div class="tarjeta__cuerpo">
+            <h3 class="tarjeta__titulo">Cepillo de bambú</h3>
+            <p class="tarjeta__descripcion">Biodegradable y con cerdas suaves. Adiós al plástico en tu baño.</p>
+            <a href="views/productos.html" class="boton boton--secundario">Ver más</a>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <img src="img/products/botella-acero.webp" alt="Botella reutilizable de acero inoxidable" class="tarjeta__imagen">
+          <div class="tarjeta__cuerpo">
+            <h3 class="tarjeta__titulo">Botella de acero</h3>
+            <p class="tarjeta__descripcion">Mantiene tu bebida fría 24 horas. Reemplaza cientos de botellas plásticas.</p>
+            <a href="views/productos.html" class="boton boton--secundario">Ver más</a>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <img src="img/products/bolsa-tela.webp" alt="Bolsa de tela de algodón" class="tarjeta__imagen">
+          <div class="tarjeta__cuerpo">
+            <h3 class="tarjeta__titulo">Bolsa de tela</h3>
+            <p class="tarjeta__descripcion">Algodón resistente para tus compras. Plegable y lavable.</p>
+            <a href="views/productos.html" class="boton boton--secundario">Ver más</a>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <img src="img/products/jabon-artesanal.webp" alt="Jabón artesanal natural" class="tarjeta__imagen">
+          <div class="tarjeta__cuerpo">
+            <h3 class="tarjeta__titulo">Jabón artesanal</h3>
+            <p class="tarjeta__descripcion">Ingredientes naturales y sin empaque plástico. Suave con tu piel.</p>
+            <a href="views/productos.html" class="boton boton--secundario">Ver más</a>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <img src="img/products/envoltura-cera.webp" alt="Envolturas de cera de abejas para alimentos" class="tarjeta__imagen">
+          <div class="tarjeta__cuerpo">
+            <h3 class="tarjeta__titulo">Envoltura de cera</h3>
+            <p class="tarjeta__descripcion">Conserva tus alimentos sin papel film. Reutilizable por un año.</p>
+            <a href="views/productos.html" class="boton boton--secundario">Ver más</a>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <img src="img/products/cafe-organico.webp" alt="Bolsa de café orgánico" class="tarjeta__imagen">
+          <div class="tarjeta__cuerpo">
+            <h3 class="tarjeta__titulo">Café orgánico</h3>
+            <p class="tarjeta__descripcion">Cultivado sin químicos por pequeños productores locales.</p>
+            <a href="views/productos.html" class="boton boton--secundario">Ver más</a>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
    <footer class="pie">

@@ -1,1 +1,67 @@
 /* Piezas que se repiten. Tarjetas, botones y campos del formulario  */
+
+/* ===== BOTÓN ===== */
+/* Un solo estilo de botón para todo el sitio; la variante --secundario es la versión con solo borde (Componentes) */
+.boton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--verde-oscuro);
+  border-radius: 2rem;
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: var(--verde);
+  border-color: var(--verde);
+}
+
+.boton--secundario {
+  background-color: transparent;
+  color: var(--verde-oscuro);
+}
+
+.boton--secundario:hover {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+}
+
+/* ===== TARJETA ===== */
+/* La tarjeta de producto: imagen arriba, texto abajo, botón siempre al fondo (Vista A: card) */
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;                 /* recorta la imagen para que respete las esquinas redondeadas */
+}
+
+.tarjeta__imagen {
+  width: 100%;
+  aspect-ratio: 4 / 3;              /* todas las fotos con la misma proporción, aunque vengan distintas */
+  object-fit: cover;
+  background-color: var(--beige);   /* lo que se ve si la foto no carga */
+}
+
+.tarjeta__cuerpo {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espacio-s);
+  padding: var(--espacio-m);
+}
+
+.tarjeta__titulo {
+  font-size: 1.15rem;
+}
+
+.tarjeta__descripcion {
+  flex-grow: 1;                     /* empuja el botón al fondo aunque el texto sea más corto */
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+}

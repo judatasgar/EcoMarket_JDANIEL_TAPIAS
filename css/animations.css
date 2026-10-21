@@ -5,3 +5,23 @@
   transition: color var(--transicion);
 }
 
+/* La tarjeta se eleva suave al pasar el mouse (Vista A: Interacción hover) */
+.tarjeta {
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.boton {
+  transition: background-color var(--transicion), color var(--transicion);
+}
+
+/* Respeto a quien desactivó las animaciones en su sistema (mareos, sensibilidad al movimiento) */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
