@@ -25,3 +25,17 @@
     transition: none !important;
   }
 }
+
+/* Los iconos sociales crecen un poco al pasar el mouse (Vista D: animación scale) */
+.redes__enlace {
+  transition: transform var(--transicion), background-color var(--transicion);
+}
+
+.redes__enlace:hover {
+  transform: scale(1.15);
+  background-color: var(--verde);
+}
+
+.pie a {
+  transition: color var(--transicion);
+}

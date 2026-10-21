@@ -116,8 +116,50 @@
     </section>
   </main>
 
-   <footer class="pie">
-    <!-- Contacto, enlaces legales y redes -->
+  <footer class="pie">
+    <div class="pie__columnas">
+      <!-- Datos de contacto; address es la etiqueta semántica para "cómo contactar al dueño de la página" (Vista A: Footer) -->
+      <section class="pie__bloque">
+        <h2 class="pie__titulo">Contacto</h2>
+        <address class="pie__contacto">
+          <a href="mailto:correo_atencion@ecomarket.co">correo_atencion@ecomarket.co</a>
+          <a href="tel:+573155724762">+57 315 572 4762</a>
+          <span>Calle 86 # 12-34, Bucaramanga, Santander</span>
+        </address>
+      </section>
+
+      <nav class="pie__bloque" aria-label="Enlaces legales">
+        <h2 class="pie__titulo">Legal</h2>
+        <ul class="pie__lista">
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Envíos y devoluciones</a></li>
+        </ul>
+      </nav>
+
+      <section class="pie__bloque">
+        <h2 class="pie__titulo">Síguenos</h2>
+        <ul class="redes">
+          <li>
+            <a href="https://www.instagram.com/dancing_dogs?mdxt=ZDNlZDc0MzIxNw==" class="redes__enlace" aria-label="Instagram" target="_blank" rel="noopener">
+              <img src="img/icons/instagram.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/visitgalvestonisland" class="redes__enlace" aria-label="Facebook" target="_blank" rel="noopener">
+              <img src="img/icons/facebook.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=bIHa1L19XYk" class="redes__enlace" aria-label="YouTube" target="_blank" rel="noopener">
+              <img src="img/icons/youtube.svg" alt="">
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="pie__copy">© 2026 EcoMarket · Compra responsable, vive sostenible y... solo Z1!</p>
   </footer>
   
 </body>

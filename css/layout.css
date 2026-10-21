@@ -181,3 +181,51 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ===== PIE DE PÁGINA ===== */
+/* En móvil todo apilado; desde tablet, 3 columnas iguales (Vista A: Footer) */
+.pie {
+  background-color: var(--beige);
+  padding: var(--espacio-xl) var(--espacio-m) var(--espacio-l);
+}
+
+.pie__columnas {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--espacio-l);
+}
+
+.pie__titulo {
+  font-size: 1rem;
+  margin-bottom: var(--espacio-s);
+}
+
+.pie__contacto,
+.pie__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-style: normal;          
+  color: var(--texto-suave);
+}
+
+.pie a:hover {
+  color: var(--verde-oscuro);
+}
+
+.pie__copy {
+  max-width: 75rem;
+  margin: var(--espacio-l) auto 0;
+  padding-top: var(--espacio-m);
+  border-top: 1px solid var(--borde);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+@media (min-width: 768px) {
+  .pie__columnas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

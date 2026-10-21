@@ -65,3 +65,23 @@
   font-size: 0.95rem;
   color: var(--texto-suave);
 }
+
+/* ===== REDES SOCIALES ===== */
+/* Círculo verde con el icono blanco centrado; el mismo componente se reutiliza en Contacto (Vista A y D) */
+.redes {
+  display: flex;
+  gap: var(--espacio-s);
+}
+
+.redes__enlace {
+  display: grid;
+  place-items: center;              /* centra el icono en ambos ejes con una sola línea */
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;               /* cuadrado con esquinas al 50% = círculo */
+  background-color: var(--verde-oscuro);
+}
+
+.redes__enlace img {
+  width: 1.25rem;
+}
