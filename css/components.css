@@ -85,3 +85,35 @@
 .redes__enlace img {
   width: 1.25rem;
 }
+
+/* ===== BUSCADOR ===== */
+/* El input va con la lupa adentro: la lupa se posiciona encima del campo (Vista B: Buscador visual) */
+.buscador {
+  position: relative;
+  width: 100%;
+  max-width: 36rem;
+}
+
+.buscador__icono {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);        /* centra verticalmente: baja 50% y sube la mitad de su alto */
+  width: 1.25rem;
+  opacity: 0.6;
+}
+
+.buscador__campo {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 3rem;   /* espacio a la izquierda para que el texto no pise la lupa */
+  border: 2px solid var(--borde);
+  border-radius: 2rem;
+  font: inherit;                      /* los inputs no heredan la fuente por defecto */
+  background-color: #fafafa;
+}
+
+.buscador__campo:focus {
+  outline: none;
+  border-color: var(--verde);
+  background-color: var(--blanco);
+}

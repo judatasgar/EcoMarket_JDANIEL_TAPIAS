@@ -39,3 +39,7 @@
 .pie a {
   transition: color var(--transicion);
 }
+
+.buscador__campo {
+  transition: border-color var(--transicion), background-color var(--transicion);
+}
