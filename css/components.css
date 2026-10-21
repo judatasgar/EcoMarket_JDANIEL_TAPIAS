@@ -117,3 +117,85 @@
   border-color: var(--verde);
   background-color: var(--blanco);
 }
+
+/* ===== FILTROS ===== */
+/* Móvil: un botón "Filtros" que abre/cierra el panel con :checked, el mismo truco del menú (Cero JavaScript) */
+.filtros {
+  background-color: var(--beige);
+  border-radius: var(--radio);
+  padding: var(--espacio-m);
+}
+
+.filtros__toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.filtros__boton {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filtros__boton::after {
+  content: "▾";                       /* flechita creada con CSS, sin imagen */
+}
+
+.filtros__panel {
+  display: none;
+  margin-top: var(--espacio-m);
+}
+
+.filtros__toggle:checked ~ .filtros__panel {
+  display: block;
+}
+
+.filtros__grupo {
+  border: none;
+  margin-bottom: var(--espacio-l);
+}
+
+.filtros__leyenda {
+  font-weight: 700;
+  margin-bottom: var(--espacio-s);
+}
+
+.filtros__opcion {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-s);
+  padding: 0.2rem 0;
+  cursor: pointer;
+}
+
+.filtros__opcion input,
+.filtros__rango {
+  accent-color: var(--verde-oscuro);  /* pinta checkbox y deslizador del verde de la marca */
+}
+
+.filtros__rango {
+  width: 100%;
+}
+
+.filtros__rango-texto {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+/* Escritorio: el panel siempre visible; el botón queda solo como título */
+@media (min-width: 1024px) {
+  .filtros__panel {
+    display: block;
+  }
+
+  .filtros__boton {
+    pointer-events: none;
+  }
+
+  .filtros__boton::after {
+    content: none;
+  }
+}
