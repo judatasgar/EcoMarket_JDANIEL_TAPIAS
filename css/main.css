@@ -1,0 +1,67 @@
+/* main.css: la base de todo. Reset, variables y tipografía (Estructura obligatoria) */
+
+/* ===== 1. RESET ===== */
+/* Cada navegador trae márgenes distintos; los pongo en cero para partir igual en todos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== 2. VARIABLES ===== */
+/* Mi panel de control: si cambio un color aquí, cambia en todo el sitio (Diseño visual) */
+:root {
+  /* Colores del enunciado */
+  --verde: #2ecc71;
+  --verde-oscuro: #27ae60;
+  --beige: #f5f5dc;
+
+  /* Colores de apoyo */
+  --texto: #2d2d2d;
+  --texto-suave: #7a7a7a;
+  --blanco: #ffffff;
+  --borde: #e0e0e0;
+  --error: #e74c3c;
+
+  /* Espacios: siempre los mismos saltos, así todo se ve ordenado */
+  --espacio-s: 0.5rem;   /* 8px  */
+  --espacio-m: 1rem;     /* 16px */
+  --espacio-l: 2rem;     /* 32px */
+  --espacio-xl: 4rem;    /* 64px */
+
+  /* Detalles */
+  --radio: 0.75rem;
+  --sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --transicion: 0.3s ease;
+}
+
+/* ===== 3. BASE Y TIPOGRAFÍA ===== */
+/* La fuente que ya trae cada dispositivo: cero librerías externas (Tipografía clara y accesible) */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background-color: var(--blanco);
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;   /* ninguna imagen se sale de su caja en móvil */
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
