@@ -323,3 +323,84 @@
   font-size: 0.95rem;
   color: var(--texto-suave);
 }
+
+/* ===== CARRUSEL ===== */
+/* Fila horizontal con scroll; scroll-snap hace que siempre se detenga centrado en una tarjeta (Vista C: Carrusel CSS) */
+html {
+  scroll-behavior: smooth;             /* los saltos con # se deslizan en vez de brincar */
+}
+
+.carrusel {
+  display: flex;
+  gap: var(--espacio-m);
+  overflow-x: auto;                    /* lo que no cabe se desplaza horizontalmente */
+  scroll-snap-type: x mandatory;       /* al soltar, se "imanta" a una tarjeta */
+  padding: var(--espacio-s) var(--espacio-s) var(--espacio-m);
+}
+
+.testimonio {
+  flex: 0 0 85%;                       /* móvil: cada tarjeta ocupa 85%, se asoma la siguiente */
+  scroll-snap-align: center;
+  scroll-margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espacio-s);
+  text-align: center;
+  padding: var(--espacio-l);
+  background-color: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 1rem;
+  box-shadow: var(--sombra);
+}
+
+.testimonio__foto {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonio__estrellas {
+  color: #f1c40f;
+  letter-spacing: 0.15rem;
+}
+
+.testimonio__comentario {
+  color: var(--texto-suave);
+  font-style: italic;
+}
+
+.testimonio__autor {
+  font-weight: 700;
+}
+
+.carrusel__puntos {
+  display: flex;
+  justify-content: center;
+  gap: var(--espacio-s);
+  margin-top: var(--espacio-m);
+}
+
+.carrusel__punto {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--borde);
+}
+
+.carrusel__punto:hover {
+  background-color: var(--verde-oscuro);
+}
+
+@media (min-width: 768px) {
+  .testimonio {
+    flex-basis: 45%;                   /* tablet: dos tarjetas visibles */
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonio {
+    flex-basis: 40%;                   /* escritorio: dos y media, invita a desplazar */
+  }
+}

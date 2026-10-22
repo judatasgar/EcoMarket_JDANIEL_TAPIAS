@@ -377,3 +377,16 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* ===== TESTIMONIOS ===== */
+.testimonios {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: var(--espacio-xl) var(--espacio-m);
+}
+
+.testimonios__titulo {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: var(--espacio-l);
+}
