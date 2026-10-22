@@ -56,3 +56,23 @@
 .paginacion__enlace {
   transition: border-color var(--transicion), color var(--transicion), background-color var(--transicion);
 }
+
+/* Principios y testimonios reaccionan al mouse (Vista C: Animación al pasar el mouse) */
+.principio,
+.testimonio {
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.principio:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra);
+}
+
+.testimonio:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.carrusel__punto {
+  transition: background-color var(--transicion);
+}
