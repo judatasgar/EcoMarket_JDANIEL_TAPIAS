@@ -480,3 +480,49 @@ html {
 .formulario:invalid .formulario__enviar {
   opacity: 0.5;
 }
+
+/* ===== MAPA ===== */
+/* Imagen estática con bordes redondeados y colores suavizados para que combine con la paleta (Vista D: Mapa estilizado) */
+.mapa {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.mapa__imagen {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  filter: grayscale(40%) sepia(15%);   /* tono más natural y menos chillón */
+}
+
+.mapa__credito {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.contacto__subtitulo-seccion {
+  font-size: 1.15rem;
+  margin-bottom: var(--espacio-s);
+}
+
+.contacto__direccion {
+  font-style: normal;
+  color: var(--texto-suave);
+}
+
+/* Variante grande de las redes para esta página */
+.redes--grande .redes__enlace {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+.redes--grande .redes__enlace img {
+  width: 1.5rem;
+}
