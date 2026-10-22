@@ -1,0 +1,25 @@
+[33m2f7108d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/readme-deploy[m[33m)[m Fix: el botón hereda la tipografía del sitio
+[33m0e33554[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m Merge branch 'feature/contact-form' into develop
+[33mc4be8c6[m[33m ([m[1;31morigin/feature/contact-form[m[33m, [m[1;32mfeature/contact-form[m[33m)[m feat: mapa estilizado y redes sociales con animación scale
+[33m6c4eff6[m Feat: Formulario/Contacto page
+[33m5235918[m feat: estructura HTML de contacto con formulario y mapa
+[33m6d13f03[m Merge branch 'feature/sobre-nosotros' into develop
+[33m6ebf7da[m[33m ([m[1;31morigin/feature/sobre-nosotros[m[33m, [m[1;32mfeature/sobre-nosotros[m[33m)[m Feat: animaciones hover en principios y testimonios
+[33m910e157[m feat: carrusel de testimonios con scroll-snap
+[33mb0cc12e[m feat: principios ecológicos en grid con iconos
+[33m9bf95dc[m feat: sección historia con flexbox responsive
+[33m91a54ba[m feat: estructura HTML de sobre nosotros con iconos de principios
+[33mf51645d[m Merge branch 'feature/catalogo' into develop
+[33m8f1972c[m[33m ([m[1;31morigin/feature/catalogo[m[33m, [m[1;32mfeature/catalogo[m[33m)[m feat: paginación visual del catálogo
+[33m93418a0[m Feat: botón de favoritos con :target y :active
+[33mec1be04[m Feat: grid responsive de productos con etiquetas de stock
+[33m47dc265[m Feat: sidebar de filtros plegable en móvil y sticky en escritorio
+[33m7ac50b3[m feat: cabecera del catálogo con buscador visual
+[33m4f93fc3[m Feat: estructura HTML del catálogo con filtros y 20 productos
+[33m976bc93[m Merge branch 'feature/home_appliances' into develop
+[33m67d1b79[m[33m ([m[1;31morigin/feature/home_appliances[m[33m, [m[1;32mfeature/home_appliances[m[33m)[m Feat: footer con contacto, enlaces legales y redes sociales
+[33mc161631[m feat: hero, grid y cargue de productos destacados
+[33maed4c6d[m Feat: header con navegación y menú hamburguesa
+[33m40300e1[m Merge branch 'feature/estructura-base' into develop
+[33me450e1d[m[33m ([m[1;31morigin/feature/estructura-base[m[33m, [m[1;32mfeature/estructura-base[m[33m)[m feat: esqueleto HTML5 del home y base CSS
+[33m3698d13[m chore: estructura inicial de carpetas

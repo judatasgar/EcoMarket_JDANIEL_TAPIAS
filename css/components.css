@@ -9,7 +9,8 @@
   border-radius: 2rem;
   background-color: var(--verde-oscuro);
   color: var(--blanco);
-  font-weight: 700;
+  font: inherit;                    /* los <button> no heredan la fuente por defecto */
+  font-weight: 700;                 /* va después de font: inherit para no perder la negrita */
   cursor: pointer;
 }
 
