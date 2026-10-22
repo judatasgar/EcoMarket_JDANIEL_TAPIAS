@@ -76,3 +76,20 @@
 .carrusel__punto {
   transition: background-color var(--transicion);
 }
+
+/* El mapa recupera su color al pasar el mouse; los campos cambian de color suave */
+.mapa__imagen {
+  transition: filter var(--transicion);
+}
+
+.mapa:hover .mapa__imagen {
+  filter: none;
+}
+
+.campo__input {
+  transition: border-color var(--transicion), background-color var(--transicion);
+}
+
+.formulario__enviar {
+  transition: opacity var(--transicion), background-color var(--transicion);
+}

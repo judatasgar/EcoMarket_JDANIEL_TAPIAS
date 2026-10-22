@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contáctanos: escríbenos tus preguntas sobre productos, pedidos o alianzas con EcoMarket.">
+  <title>EcoMarket | Contacto</title>
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <a href="../index.html" class="encabezado__logo">EcoMarket</a>
+
+    <div class="encabezado__acciones">
+      <a href="productos.html" aria-label="Buscar productos">
+        <img src="../img/icons/buscar.svg" alt="">
+      </a>
+      <a href="#" aria-label="Ver carrito">
+        <img src="../img/icons/carrito.svg" alt="">
+      </a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="encabezado__toggle">
+    <label for="menu-toggle" class="encabezado__hamburguesa" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="nav">
+      <ul class="nav__lista">
+        <li><a href="../index.html" class="nav__enlace">Inicio</a></li>
+        <li><a href="productos.html" class="nav__enlace">Productos</a></li>
+        <li><a href="sobre-nosotros.html" class="nav__enlace">Nosotros</a></li>
+        <li><a href="contacto.html" class="nav__enlace nav__enlace--activo">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contacto">
+    <div class="contacto__intro">
+      <h1 class="contacto__titulo">Contáctanos</h1>
+      <p class="contacto__subtitulo">¿Preguntas sobre un producto o un pedido? Escríbenos y te respondemos en menos de 24 horas.</p>
+    </div>
+
+    <div class="contacto__cuerpo">
+      <!-- Formulario: las reglas (required, type, minlength) las pone HTML; los colores de validación los pone CSS (Vista D: Formulario inteligente) -->
+      <form class="formulario" action="#">
+        <div class="campo">
+          <label for="nombre" class="campo__etiqueta">Nombre</label>
+          <input type="text" id="nombre" name="nombre" class="campo__input" placeholder="Tu nombre completo" required minlength="3">
+          <span class="campo__error">Escribe al menos 3 letras.</span>
+        </div>
+
+        <div class="campo">
+          <label for="email" class="campo__etiqueta">Email</label>
+          <input type="email" id="email" name="email" class="campo__input" placeholder="tucorreo@ejemplo.com" required>
+          <span class="campo__error">Escribe un correo válido, por ejemplo: nombre@correo.com</span>
+        </div>
+
+        <div class="campo">
+          <label for="mensaje" class="campo__etiqueta">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" class="campo__input campo__input--area" placeholder="Cuéntanos en qué te podemos ayudar..." required minlength="10"></textarea>
+          <span class="campo__error">El mensaje debe tener al menos 10 caracteres.</span>
+        </div>
+
+        <button type="submit" class="boton formulario__enviar">Enviar mensaje</button>
+      </form>
+
+      <!-- Información complementaria: mapa estático, datos y redes (Vista D: Mapa y Redes Sociales) -->
+      <aside class="contacto__info">
+        <figure class="mapa">
+          <img src="../img/hero/mapa.webp" alt="Mapa de la ubicación de la tienda EcoMarket" class="mapa__imagen">
+          <figcaption class="mapa__credito">Mapa © OpenStreetMap</figcaption>
+        </figure>
+
+        <div class="contacto__datos">
+          <h2 class="contacto__subtitulo-seccion">Visítanos</h2>
+          <address class="contacto__direccion">
+            Calle 00 #00-00, Ciudad<br>
+            Lunes a sábado · 9:00 a 18:00
+          </address>
+        </div>
+
+        <div class="contacto__datos">
+          <h2 class="contacto__subtitulo-seccion">Síguenos</h2>
+          <ul class="redes redes--grande">
+            <li><a href="https://instagram.com" class="redes__enlace" aria-label="Instagram" target="_blank" rel="noopener"><img src="../img/icons/instagram.svg" alt=""></a></li>
+            <li><a href="https://facebook.com" class="redes__enlace" aria-label="Facebook" target="_blank" rel="noopener"><img src="../img/icons/facebook.svg" alt=""></a></li>
+            <li><a href="https://youtube.com" class="redes__enlace" aria-label="YouTube" target="_blank" rel="noopener"><img src="../img/icons/youtube.svg" alt=""></a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="pie__columnas">
+      <section class="pie__bloque">
+        <h2 class="pie__titulo">Contacto</h2>
+        <address class="pie__contacto">
+          <a href="mailto:correo_atencion@ecomarket.co">correo_atencion@ecomarket.co</a>
+          <a href="tel:+573155724762">+57 315 572 4762</a>
+          <span>Calle 86 # 12-34, Bucaramanga, Santander</span>
+        </address>
+      </section>
+
+      <nav class="pie__bloque" aria-label="Enlaces legales">
+        <h2 class="pie__titulo">Legal</h2>
+        <ul class="pie__lista">
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Envíos y devoluciones</a></li>
+        </ul>
+      </nav>
+
+      <section class="pie__bloque">
+        <h2 class="pie__titulo">Síguenos</h2>
+        <ul class="redes">
+          <li><a href="https://www.instagram.com/dancing_dogs?mdxt=ZDNlZDc0MzIxNw==" class="redes__enlace" aria-label="Instagram" target="_blank" rel="noopener"><img src="../img/icons/instagram.svg" alt=""></a></li>
+          <li><a href="https://www.facebook.com/visitgalvestonisland" class="redes__enlace" aria-label="Facebook" target="_blank" rel="noopener"><img src="../img/icons/facebook.svg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=bIHa1L19XYk" class="redes__enlace" aria-label="YouTube" target="_blank" rel="noopener"><img src="../img/icons/youtube.svg" alt=""></a></li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="pie__copy">© 2026 EcoMarket · Compra responsable, vive sostenible y... solo Z1!</p>
+  </footer>
+
+</body>
+</html>
