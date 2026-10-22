@@ -293,3 +293,33 @@
   border-color: var(--verde-oscuro);
   color: var(--blanco);
 }
+
+/* ===== PRINCIPIO ===== */
+/* Icono en círculo verde claro, nombre y descripción centrados (Vista C) */
+.principio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espacio-s);
+  text-align: center;
+  padding: var(--espacio-l) var(--espacio-m);
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+}
+
+.principio__icono {
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: #d5f5e3;
+}
+
+.principio__nombre {
+  font-size: 1.1rem;
+}
+
+.principio__texto {
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+}
