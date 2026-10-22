@@ -298,3 +298,95 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* ===== HISTORIA ===== */
+/* Flexbox: en móvil la imagen va arriba (column); desde tablet, imagen | texto en fila (Vista C: Layout Flexbox) */
+.historia {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: var(--espacio-xl) var(--espacio-m);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-l);
+}
+
+.historia__imagen {
+  width: 100%;
+  border-radius: var(--radio);
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.historia__texto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
+  color: var(--texto-suave);
+}
+
+.historia__titulo {
+  font-size: 2rem;
+  color: var(--texto);
+}
+
+@media (min-width: 768px) {
+  .historia {
+    flex-direction: row;               /* el mismo contenedor, ahora en fila */
+    align-items: center;
+  }
+
+  .historia__imagen,
+  .historia__texto {
+    flex: 1;                           /* las dos mitades ocupan lo mismo */
+    min-width: 0;                      /* permite que la imagen se encoja dentro de su mitad */
+  }
+
+  .historia__titulo {
+    font-size: 2.5rem;
+  }
+}
+
+/* ===== PRINCIPIOS ===== */
+/* Grid de 1 → 2 → 4 columnas sobre fondo beige (Vista C: Principios ecológicos) */
+.principios {
+  background-color: var(--beige);
+  padding: var(--espacio-xl) var(--espacio-m);
+}
+
+.principios__titulo {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: var(--espacio-l);
+}
+
+.principios__lista {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--espacio-l);
+}
+
+@media (min-width: 768px) {
+  .principios__lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .principios__lista {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== TESTIMONIOS ===== */
+.testimonios {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: var(--espacio-xl) var(--espacio-m);
+}
+
+.testimonios__titulo {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: var(--espacio-l);
+}

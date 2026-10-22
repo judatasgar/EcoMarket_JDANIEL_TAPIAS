@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce la historia, la misión y los principios ecológicos de EcoMarket.">
+  <title>EcoMarket | Nosotros</title>
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <a href="../index.html" class="encabezado__logo">EcoMarket</a>
+
+    <div class="encabezado__acciones">
+      <a href="productos.html" aria-label="Buscar productos">
+        <img src="../img/icons/buscar.svg" alt="">
+      </a>
+      <a href="#" aria-label="Ver carrito">
+        <img src="../img/icons/carrito.svg" alt="">
+      </a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="encabezado__toggle">
+    <label for="menu-toggle" class="encabezado__hamburguesa" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="nav">
+      <ul class="nav__lista">
+        <li><a href="../index.html" class="nav__enlace">Inicio</a></li>
+        <li><a href="productos.html" class="nav__enlace">Productos</a></li>
+        <li><a href="sobre-nosotros.html" class="nav__enlace nav__enlace--activo">Nosotros</a></li>
+        <li><a href="contacto.html" class="nav__enlace">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Historia: imagen y texto lado a lado con Flexbox; en móvil uno encima del otro (Vista C: Historia) -->
+    <section class="historia">
+      <img src="../img/hero/historia.webp" alt="Equipo de EcoMarket en su primera tienda" class="historia__imagen">
+      <div class="historia__texto">
+        <h1 class="historia__titulo">Nuestra historia</h1>
+        <p>EcoMarket nació en 2026 con una idea simple: que comprar de forma responsable sea fácil, bonito y accesible para todos.</p>
+        <p>Trabajamos con productores locales que comparten nuestros valores, y cada producto pasa por un filtro de sostenibilidad antes de llegar a tu casa.</p>
+        <p>Creemos que los pequeños cambios diarios, multiplicados por muchas personas, transforman el planeta.</p>
+      </div>
+    </section>
+
+    <!-- Principios: lista de iconos con descripción; es una lista porque son elementos del mismo tipo (Vista C: Principios ecológicos) -->
+    <section class="principios">
+      <h2 class="principios__titulo">Nuestros principios ecológicos</h2>
+      <ul class="principios__lista">
+        <li class="principio">
+          <img src="../img/icons/sin-plastico.svg" alt="" class="principio__icono">
+          <h3 class="principio__nombre">Sin plástico</h3>
+          <p class="principio__texto">Empaques compostables y cero plásticos de un solo uso.</p>
+        </li>
+        <li class="principio">
+          <img src="../img/icons/comercio-justo.svg" alt="" class="principio__icono">
+          <h3 class="principio__nombre">Comercio justo</h3>
+          <p class="principio__texto">Pagamos precios justos a quienes producen lo que vendemos.</p>
+        </li>
+        <li class="principio">
+          <img src="../img/icons/produccion-local.svg" alt="" class="principio__icono">
+          <h3 class="principio__nombre">Producción local</h3>
+          <p class="principio__texto">Menos transporte, menos huella de carbono y más economía local.</p>
+        </li>
+        <li class="principio">
+          <img src="../img/icons/reutilizable.svg" alt="" class="principio__icono">
+          <h3 class="principio__nombre">Reutilizable</h3>
+          <p class="principio__texto">Productos pensados para durar años, no días.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Testimonios: carrusel horizontal con scroll-snap; los puntos son enlaces a cada tarjeta (Vista C: Carrusel CSS) -->
+    <section class="testimonios">
+      <h2 class="testimonios__titulo">Lo que dicen nuestros clientes</h2>
+
+      <div class="carrusel">
+        <article class="testimonio" id="testimonio-1">
+          <img src="../img/hero/cliente-1.webp" alt="" class="testimonio__foto">
+          <p class="testimonio__estrellas" aria-label="5 de 5 estrellas">★★★★★</p>
+          <blockquote class="testimonio__comentario">
+            <p>“Cambié todo mi baño a productos de bambú. Llegaron rápido y sin un gramo de plástico.”</p>
+          </blockquote>
+          <p class="testimonio__autor">Laura Gómez</p>
+        </article>
+
+        <article class="testimonio" id="testimonio-2">
+          <img src="../img/hero/cliente-2.webp" alt="" class="testimonio__foto">
+          <p class="testimonio__estrellas" aria-label="5 de 5 estrellas">★★★★★</p>
+          <blockquote class="testimonio__comentario">
+            <p>“La botella de acero me acompaña todos los días. Dejé de comprar agua embotellada.”</p>
+          </blockquote>
+          <p class="testimonio__autor">Andrés Ruiz</p>
+        </article>
+
+        <article class="testimonio" id="testimonio-3">
+          <img src="../img/hero/cliente-3.webp" alt="" class="testimonio__foto">
+          <p class="testimonio__estrellas" aria-label="4 de 5 estrellas">★★★★☆</p>
+          <blockquote class="testimonio__comentario">
+            <p>“Me encanta saber quién produce lo que compro. La miel local es increíble.”</p>
+          </blockquote>
+          <p class="testimonio__autor">Camila Torres</p>
+        </article>
+      </div>
+
+      <nav class="carrusel__puntos" aria-label="Elegir testimonio">
+        <a href="#testimonio-1" class="carrusel__punto" aria-label="Testimonio 1"></a>
+        <a href="#testimonio-2" class="carrusel__punto" aria-label="Testimonio 2"></a>
+        <a href="#testimonio-3" class="carrusel__punto" aria-label="Testimonio 3"></a>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="pie__columnas">
+      <section class="pie__bloque">
+        <h2 class="pie__titulo">Contacto</h2>
+        <address class="pie__contacto">
+          <a href="mailto:correo_atencion@ecomarket.co">correo_atencion@ecomarket.co</a>
+          <a href="tel:+573155724762">+57 315 572 4762</a>
+          <span>Calle 86 # 12-34, Bucaramanga, Santander</span>
+        </address>
+      </section>
+
+      <nav class="pie__bloque" aria-label="Enlaces legales">
+        <h2 class="pie__titulo">Legal</h2>
+        <ul class="pie__lista">
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Envíos y devoluciones</a></li>
+        </ul>
+      </nav>
+
+      <section class="pie__bloque">
+        <h2 class="pie__titulo">Síguenos</h2>
+        <ul class="redes">
+          <li><a href="https://www.instagram.com/dancing_dogs?mdxt=ZDNlZDc0MzIxNw==" class="redes__enlace" aria-label="Instagram" target="_blank" rel="noopener"><img src="../img/icons/instagram.svg" alt=""></a></li>
+          <li><a href="https://www.facebook.com/visitgalvestonisland" class="redes__enlace" aria-label="Facebook" target="_blank" rel="noopener"><img src="../img/icons/facebook.svg" alt=""></a></li>
+          <li><a href="https://www.youtube.com/watch?v=bIHa1L19XYk" class="redes__enlace" aria-label="YouTube" target="_blank" rel="noopener"><img src="../img/icons/youtube.svg" alt=""></a></li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="pie__copy">© 2026 EcoMarket · Compra responsable, vive sostenible y... solo Z1!</p>
+  </footer>
+
+</body>
+</html>
