@@ -404,3 +404,79 @@ html {
     flex-basis: 40%;                   /* escritorio: dos y media, invita a desplazar */
   }
 }
+
+/* ===== FORMULARIO ===== */
+/* Tarjeta blanca con campos apilados; cada campo es etiqueta + input + mensaje de error (Vista D: Formulario) */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-l);
+  padding: var(--espacio-l);
+  background-color: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 1rem;
+  box-shadow: var(--sombra);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campo__etiqueta {
+  font-weight: 700;
+}
+
+.campo__input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--borde);
+  border-radius: 0.5rem;
+  font: inherit;
+  background-color: var(--blanco);
+}
+
+.campo__input:focus {
+  outline: none;
+  border-color: var(--verde-oscuro);
+}
+
+.campo__input--area {
+  min-height: 9rem;
+  resize: vertical;                    /* el usuario puede agrandarlo solo hacia abajo */
+}
+
+.campo__error {
+  display: none;                       /* oculto hasta que el campo sea inválido */
+  font-size: 0.85rem;
+  color: var(--error);
+}
+
+.formulario__enviar {
+  align-self: flex-start;
+}
+
+/* ===== VALIDACIÓN ===== */
+/* Verde si el dato es correcto, rojo si no. :not(:placeholder-shown) evita pintar de rojo antes de que la persona escriba (Vista D: Validación visual) */
+.campo__input:not(:placeholder-shown):valid {
+  border-color: var(--verde);
+  background-color: #f0fbf4;
+}
+
+.campo__input:not(:placeholder-shown):invalid,
+.campo__input:user-invalid {
+  border-color: var(--error);
+  background-color: #fdf0ef;
+}
+
+/* El mensaje aparece justo debajo del campo con error */
+.campo__input:not(:placeholder-shown):invalid ~ .campo__error,
+.campo__input:user-invalid ~ .campo__error {
+  display: block;
+}
+
+/* Mientras el formulario tenga algún campo inválido, el botón se ve apagado */
+.formulario:invalid .formulario__enviar {
+  opacity: 0.5;
+}
