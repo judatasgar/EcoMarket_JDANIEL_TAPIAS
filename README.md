@@ -1,6 +1,10 @@
 # EcoMarket
 
-Tienda en línea de productos, maquetada solo con HTML5 semántico y CSS3 puro. No usa JavaScript ni frameworks: toda la interactividad (menú, filtros, favoritos, carrusel y validación de formularios) está resuelta con CSS.
+## Descripción
+
+EcoMarket es una tienda en línea dedicada a productos ecológicos, reutilizables y sustentables. Su objetivo es ofrecer una plataforma accesible y atractiva donde los usuarios puedan explorar productos, conocer sus beneficios y comprar de forma responsable.
+
+El sitio está maquetado solo con HTML5 semántico y CSS3 puro. No usa JavaScript ni frameworks: toda la interactividad (menú, filtros, favoritos, carrusel y validación de formularios) está resuelta con CSS.
 
 🔗 **Sitio publicado:** https://judatasgar.github.io/EcoMarket_JDANIEL_TAPIAS/
 
@@ -18,7 +22,7 @@ Tienda en línea de productos, maquetada solo con HTML5 semántico y CSS3 puro. 
 ## Tecnologías
 
 - **HTML5 semántico:** `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`, `address`, `figure`, `blockquote`, `fieldset`
-- **CSS3 puro:** Flexbox, CSS Grid, variables (`:root`), media queries, transiciones, `scroll-snap`
+- **CSS3 puro:** Flexbox, CSS Grid, variables (`:root`), media queries, transiciones, `@keyframes`, `scroll-snap`
 - **Íconos SVG propios**, sin librerías externas
 - **Git** con GitFlow y **GitHub Pages** para el despliegue
 
@@ -34,6 +38,7 @@ Tienda en línea de productos, maquetada solo con HTML5 semántico y CSS3 puro. 
 | Validación del formulario | `:valid`, `:invalid`, `:placeholder-shown` y `:user-invalid` |
 | Tarjetas que se elevan | `:hover` + `transform: translateY()` + `transition` |
 | Redes sociales | `:hover` + `transform: scale()` |
+| Entrada del hero al cargar | `@keyframes` + `animation` |
 
 ## Decisiones de diseño
 
@@ -41,7 +46,7 @@ Tienda en línea de productos, maquetada solo con HTML5 semántico y CSS3 puro. 
 - **Paleta natural:** verdes `#2ecc71` y `#27ae60`, beige `#f5f5dc`, definidos como variables en `css/main.css`.
 - **Tipografía del sistema** (`system-ui`): legible, accesible y sin descargas externas.
 - **Clases con BEM en español:** `.tarjeta__titulo`, `.etiqueta--agotado`, etc.
-- **Accesibilidad:** textos `alt`, `aria-label` en los íconos, `label` en cada campo y respeto a `prefers-reduced-motion`.
+- **Accesibilidad:** textos `alt`, `aria-label` en los íconos y en el menú, `label` en cada campo, estrellas con `role="img"` y respeto a `prefers-reduced-motion` (desactiva transiciones y animaciones).
 - **Rendimiento:** imágenes en `.webp` optimizadas y `loading="lazy"` en el catálogo.
 
 ## Estructura
@@ -52,10 +57,10 @@ EcoMarket_JDANIEL_TAPIAS/
 │   ├── main.css          # Reset, variables y tipografía
 │   ├── layout.css        # Header, footer y grids de cada sección
 │   ├── components.css    # Tarjetas, botones, formulario, filtros
-│   └── animations.css    # Transiciones y efectos hover
+│   └── animations.css    # Keyframes y transiciones
 ├── img/
 │   ├── products/         # Fotos de productos (.webp)
-│   ├── icons/            # Íconos SVG
+│   ├── icons/            # Íconos SVG y favicon
 │   └── hero/             # Banner, historia, mapa y clientes
 ├── views/
 │   ├── productos.html
@@ -105,7 +110,7 @@ Antes de programar, el diseño se planeó con wireframes en Figma, en versión m
 
 ## Flujo de trabajo con Git
 
-Se usó **GitFlow**: cada sección se desarrolló en su propia rama `feature/`, se unió a `develop` y después a `main`, que es la rama publicada. Los commits siguen **Conventional Commits** (`feat:`, `fix:`, `docs:`, `chore:`).
+Se usó **GitFlow**: cada sección se desarrolló en su propia rama `feature/`, se unió a `develop` y después a `main`, que es la rama publicada. Las correcciones de validación y accesibilidad se hicieron en una rama `fix/`. Los commits siguen **Conventional Commits** (`feat:`, `fix:`, `docs:`, `chore:`).
 
 ```
 main  ←  develop  ←  feature/estructura-base
@@ -114,7 +119,9 @@ main  ←  develop  ←  feature/estructura-base
                   ←  feature/sobre-nosotros
                   ←  feature/contact-form
                   ←  feature/readme-deploy
+                  ←  fix/validacion-accesibilidad
 ```
+
 ## Autor
 
 **J. Daniel Tapias** · [@judatasgar](https://github.com/judatasgar)
